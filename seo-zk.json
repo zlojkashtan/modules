@@ -1,0 +1,56 @@
+{
+    "name": "SEO-ZK",
+    "description": "Fields for SEO (meta description, …)",
+    "prefix": "seo",
+    "dependencies": [],
+    "fields": [
+        {
+            "name": "tab",
+            "type": "FieldtypeFieldsetTabOpen",
+            "label": "SEO"
+        },
+        {
+            "name": "meta_title",
+            "type": "FieldtypeText",
+            "label": "Meta Title"
+        },
+        {
+            "name": "meta_description",
+            "type": "FieldtypeTextarea",
+            "label": "Meta Description",
+            "attributes": [
+                {
+                    "name": "maxchars",
+                    "value": 160
+                }
+            ]
+        },
+        {
+            "name": "meta_keywords",
+            "type": "FieldtypeText",
+            "label": "Meta Keywords"
+        },
+        {
+            "name": "top_code",
+            "type": "FieldtypeTextarea",
+            "label": "Code in Header"
+        },
+        {
+            "name": "bottom_code",
+            "type": "FieldtypeTextarea",
+            "label": "Code if Footer"
+        },
+        {
+            "name": "close_tab",
+            "type": "FieldtypeFieldsetClose",
+            "label": ""
+        }
+    ],
+    "templates": [
+        {
+            "name": "home",
+            "prefab": true,
+            "fields": ["seo_tab", "seo_meta_title", "seo_meta_description", "seo_meta_keywords", "seo_top_code", "seo_bottom_code", "seo_close_tab"]
+        }
+    ]
+}
